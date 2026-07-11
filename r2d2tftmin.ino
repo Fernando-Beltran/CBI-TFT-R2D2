@@ -3,8 +3,8 @@
 #include <Preferences.h> 
 
 // Archivos GIF activos
-//#include "gif_files/radar28.h"   
-#include "gif_files/radar41.h"   
+//#include "radar28.h"   
+#include "radar41.h"   
 
 #define PUSH_BUTTON_PIN 13
 
@@ -14,8 +14,11 @@ AnimatedGIF gif;
 Preferences prefs;
 
 #define GIF_COUNT 1 
+//#define GIF_COUNT 2 
 const uint8_t *gifData[GIF_COUNT] = { radar41}; 
+//const uint8_t *gifData[GIF_COUNT] = { radar41,radar28}; 
 const size_t gifSizes[GIF_COUNT] = { sizeof(radar41)}; 
+//const size_t gifSizes[GIF_COUNT] = { sizeof(radar41,sizeof(radar28))}; 
 
 unsigned long lastDebounce;
 unsigned long lastChangeTime = 0; 
